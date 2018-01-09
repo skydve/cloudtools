@@ -3,11 +3,6 @@ FROM nvidia/cuda:9.1-cudnn7-devel-ubuntu16.04
 RUN apt update
 RUN apt install -y curl git unzip graphviz wget
 
-RUN apt -y upgrade --force-yes -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold"
-RUN apt -y autoremove
-RUN ufw allow 8888:8898/tcp
-RUN apt -y install --allow -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" qtdeclarative5-dev qml-module-qtquick-controls
-
 RUN wget https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
 RUN bash Anaconda3-5.0.1-Linux-x86_64.sh -b
 RUN cd
