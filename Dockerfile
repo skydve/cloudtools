@@ -1,7 +1,7 @@
 FROM nvidia/cuda:9.1-cudnn7-devel-ubuntu16.04
 
 RUN apt update
-RUN apt install -y curl git unzip graphviz
+RUN apt install -y curl git unzip graphviz wget
 
 RUN wget https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
 RUN bash Anaconda3-5.0.1-Linux-x86_64.sh -b
